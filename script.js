@@ -43,7 +43,16 @@ function addC() {
 
 // Remove a row
 function removeR() {
- 
+    const grid = document.getElementById('grid')
+    if(numRows == 1){
+        grid.innerHTML = ''
+        numCols = 0
+        numRows= 0
+    }
+    else{
+    grid.deleteRow(1)
+    numRows -= 1
+    }
 }
 
 // Remove a column
