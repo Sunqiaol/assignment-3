@@ -74,6 +74,11 @@ function removeC() {
 function selectColor(){
     colorSelected = document.getElementById("selectedColorId").value;
     console.log(colorSelected);
+    const grid = document.getElementById('grid')
+    grid.addEventListener("click",function(event){
+        const cell = event.target;
+        cell.style.backgroundColor = colorSelected
+    })
 }
 
 // Fill all uncolored cells
