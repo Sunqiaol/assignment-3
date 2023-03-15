@@ -5,17 +5,32 @@ let colorSelected;
 
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    const grid = document.getElementById('grid');
+
+    const newRow = document.createElement('tr');
+    const newCells = []
+
+    if(numCols == 0){
+        numCols +=1
+    }
+
+    for(let i = 0;i<numCols;i++){
+        const newCell = document.createElement("td");
+        newCells.push(newCell);
+        newRow.appendChild(newCells[i]);
+    }
+    numRows +=1
+    grid.appendChild(newRow);
 }
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+
 }
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+ 
 }
 
 // Remove a column
